@@ -1,0 +1,57 @@
+.headerContainer {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.headerContent {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoButton {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bitcoinLogo {
+  color: #f7931a;
+  font-size: 28px;
+}
+
+.logoText {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 8px;
+  color: #333;
+}
+
+.navLinks button {
+  background: none;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #333;
+}
+
+.navLinks button:hover {
+  color: #007bff;
+}
+
+.authButtons {
+  display: flex;
+  align-items: center;
+}
+
+
+
+

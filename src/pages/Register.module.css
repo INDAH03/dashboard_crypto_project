@@ -1,0 +1,138 @@
+.registerContainer {
+  background: #eeeeee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.registerCard {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.registerHeader {
+  background-color: #3676ff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.registerTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.registerBody {
+  padding: 30px;
+  background: white;
+  border-radius: 0 0 8px 8px;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.formControl {
+  width: 90%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.formControl:focus {
+  border-color: #3a4a6d;
+  box-shadow: 0 0 0 3px rgba(58, 74, 109, 0.1);
+}
+
+.rememberForgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+  margin-right: 10px;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.forgotLink {
+  color: #3676ff;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.forgotLink:hover {
+  text-decoration: underline;
+}
+
+.registerButton {
+  width: 100%;
+  padding: 12px;
+  background-color: #3676ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 1rem 0;
+}
+
+.registerButton:hover {
+  background-color: #3676ff;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 1.5rem 0;
+}
+
+.welcomeText {
+  text-align: center;
+  color: #3a4a6d;
+  font-size: 0.95rem;
+  margin: 1rem 0;
+}
+
+.loginPrompt {
+  text-align: center;
+  color: #4b4c4e;
+  font-size: 0.95rem;
+}
+
+.loginLink {
+  color: #3676ff;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.errorAlert {
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+}
