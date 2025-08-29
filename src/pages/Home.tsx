@@ -36,7 +36,7 @@ const Home: React.FC = () => {
           {isLoggedIn ? (
             <button
               className="btn btn-success btn-lg mt-3"
-              onClick={() => navigate("/trading")}
+              onClick={() => navigate("/prices")}
             >
               Trading Sekarang
             </button>

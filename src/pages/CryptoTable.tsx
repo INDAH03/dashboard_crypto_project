@@ -16,9 +16,16 @@ const CryptoTable: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    getCryptoPrices()
-      .then(setData)
-      .catch((err) => setError(err.message));
+    const fetchData = () => {
+      getCryptoPrices()
+        .then(setData)
+        .catch((err) => setError(err.message));
+    };
+
+    fetchData(); 
+    const interval = setInterval(fetchData, 30000); 
+
+    return () => clearInterval(interval); 
   }, []);
 
   if (error) return <p className="text-danger">{error}</p>;
@@ -43,16 +50,31 @@ const CryptoTable: React.FC = () => {
                   {coin.name} ({coin.symbol.toUpperCase()})
                 </td>
                 <td>
-                  ${coin.current_price.toLocaleString("en-US", { minimumFractionDigits: 2 })}
+                  ${coin.current_price.toLocaleString("en-US", {
+                    minimumFractionDigits: 2,
+                  })}
                 </td>
                 <td>
+                <div className="d-flex gap-2 justify-content-center">
+                  {/* <button
+                    className="btn btn-success btn-sm"
+                    onClick={() => navigate(`/buy/${coin.id}`)}
+                  >
+                    Buy
+                  </button> */}
+                  <button
+                  className="btn btn-success btn-sm"
+                  onClick={() => navigate(`/buy/${coin.id}`)}>
+                  Buy
+                  </button>
                   <button
                     className="btn btn-primary btn-sm"
                     onClick={() => navigate(`/coins/${coin.id}`)}
                   >
                     Lihat Detail
                   </button>
-                </td>
+                </div>
+              </td>
               </tr>
             ))}
           </tbody>
@@ -63,3 +85,5 @@ const CryptoTable: React.FC = () => {
 };
 
 export default CryptoTable;
+
+   
