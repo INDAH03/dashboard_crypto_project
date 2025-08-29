@@ -1,4 +1,3 @@
-// src/components/UserProvider.tsx
 import React, { useState, useEffect } from 'react';
 import { UserContext } from './UserContext';
 import type { User } from '../types';

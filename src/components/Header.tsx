@@ -53,7 +53,7 @@ const Header: React.FC = () => {
           <button className={styles.navButton} onClick={() => navigate('/news')}>Berita</button>
         </nav>
 
-        {/* Auth Buttons / User Dropdown */}
+        {/* User Dropdown */}
         <div className={styles.authButtons}>
           {user ? (
             <Dropdown align="end">
@@ -61,14 +61,23 @@ const Header: React.FC = () => {
                 <FaUserCircle size={20} className="me-1" />
                 {user.name}
               </Dropdown.Toggle>
-
               <Dropdown.Menu>
-                <Dropdown.Item onClick={() => navigate('/orders')}>Pesanan</Dropdown.Item>
-                <Dropdown.Item onClick={() => navigate('/assets')}>Aset</Dropdown.Item>
-                <Dropdown.Item onClick={() => navigate('/account')}>Akun</Dropdown.Item>
-                <Dropdown.Divider />
+                <Dropdown.Item onClick={() => navigate('/profile?tab=orders')}>Pesanan</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate('/profile?tab=assets')}>Aset</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate('/account')}>Akun</Dropdown.Item> 
+                <Dropdown.Divider/>
                 <Dropdown.Item onClick={handleLogout} className="text-danger">Keluar</Dropdown.Item>
               </Dropdown.Menu>
+
+              {/* <Dropdown.Menu>
+                <Dropdown.Item onClick={() => navigate('/account?tab=orders')}>Pesanan</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate('/account?tab=assets')}>Aset</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate('/orders')}>Pesanan</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate('/assets')}>Aset</Dropdown.Item>
+                <Dropdown.Item onClick={() => navigate('/account')}>Akun</Dropdown.Item> 
+                <Dropdown.Divider />
+                <Dropdown.Item onClick={handleLogout} className="text-danger">Keluar</Dropdown.Item>
+              </Dropdown.Menu> */}
             </Dropdown>
           ) : (
             <>
